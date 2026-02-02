@@ -1,3 +1,4 @@
+index.html
 # Project Overview
 
 Ten projekt to statyczna strona internetowa **Fazy Księżyca**, zbudowana w czystym **HTML i CSS** jako strona pokazowa (showcase). Celem strony jest zaprezentowanie podstawowej struktury HTML, prostego layoutu oraz czytelnej prezentacji treści edukacyjnych. Strona nie korzysta z danych w czasie rzeczywistym – skupia się na wyglądzie, semantyce i organizacji treści.
