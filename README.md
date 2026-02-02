@@ -1,77 +1,113 @@
+# Project Overview
+
+Ten projekt to statyczna strona internetowa **Fazy Księżyca**, zbudowana w czystym **HTML i CSS** jako strona pokazowa (showcase). Celem strony jest zaprezentowanie podstawowej struktury HTML, prostego layoutu oraz czytelnej prezentacji treści edukacyjnych. Strona nie korzysta z danych w czasie rzeczywistym – skupia się na wyglądzie, semantyce i organizacji treści.
+
+Główne cele projektu:
+
+* Ćwiczenie podstawowej, semantycznej struktury HTML.
+* Stworzenie przejrzystej strony informacyjnej o fazach Księżyca.
+* Zastosowanie prostych stylów CSS (kolory, typografia, układ).
+* Przygotowanie bazy, którą można później rozbudować o JavaScript (np. aktualna faza Księżyca).
+
+Projekt składa się z jednego pliku: **index.html**.
+
+---
+
+## HTML Structure Decisions
+
+Strona rozpoczyna się standardową deklaracją dokumentu i podstawową sekcją `<head>`:
+
+```html
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Moja strona na GitHub Pages</title>
-  <style>
-    body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f5f7fb;
-      color: #222;
-    }
-    header {
-      background: #24292e;
-      color: white;
-      padding: 2rem;
-      text-align: center;
-    }
-    main {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 1.5rem;
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 10px 30px rgba(0,0,0,.08);
-    }
-    h1 { margin-top: 0; }
-    footer {
-      text-align: center;
-      padding: 2rem;
-      font-size: 0.9rem;
-      color: #666;
-    }
-    a { color: #0969da; text-decoration: none; }
-  </style>
+  <meta charset="UTF-8">
+  <title>Fazy Księżyca</title>
 </head>
-<body>
-  <header>
-    <h1>🌙 Fazy Księżyca</h1>
-    <p>Poznaj cykl księżycowy krok po kroku</p>
-  </header>
+```
 
-  <main>
-    <h2>Czym są fazy Księżyca?</h2>
-    <p>
-      Fazy Księżyca to zmiany wyglądu tarczy Księżyca widocznej z Ziemi.
-      Wynikają one z jego ruchu wokół Ziemi oraz oświetlenia przez Słońce.
-      Pełny cykl trwa około <strong>29,5 dnia</strong>.
-    </p>
+### Główne sekcje strony
 
-    <h2>Główne fazy Księżyca</h2>
-    <ul>
-      <li>🌑 <strong>Nów</strong> – Księżyc jest niewidoczny</li>
-      <li>🌓 <strong>Pierwsza kwadra</strong> – widoczna połowa tarczy</li>
-      <li>🌕 <strong>Pełnia</strong> – cała tarcza jest oświetlona</li>
-      <li>🌗 <strong>Ostatnia kwadra</strong> – znów widoczna połowa</li>
-    </ul>
+**Nagłówek (header)**
+Zawiera tytuł strony i krótkie wprowadzenie. Pełni funkcję sekcji „hero”, która jasno komunikuje temat strony.
 
-    <h2>Ciekawostki</h2>
-    <p>
-      🌊 Fazy Księżyca wpływają na pływy oceanów.<br />
-      📅 Dawniej na ich podstawie tworzono kalendarze.<br />
-      🌌 Ten sam Księżyc wygląda inaczej w zależności od dnia miesiąca.
-    </p>
+**Sekcja główna (main)**
+W tej części znajdują się:
 
-    <p>
-      🔭 Chcesz sprawdzić aktualną fazę? Zajrzyj do astronomicznych serwisów online.
-    </p>
-  </main>
+* opis czym są fazy Księżyca,
+* lista głównych faz (Nów, Pierwsza kwadra, Pełnia, Ostatnia kwadra),
+* krótkie ciekawostki astronomiczne.
 
-  <footer>
-    © 2026 · Moja strona na GitHub
-  </footer>
-</body>
-</html>
+Treść została podzielona za pomocą nagłówków `<h2>` i list `<ul>`, co poprawia czytelność i hierarchię informacji.
+
+**Stopka (footer)**
+Zawiera prostą informację o autorze strony.
+
+Struktura HTML jest prosta i czytelna, ale w przyszłości może zostać jeszcze bardziej ustrukturyzowana przy użyciu dodatkowych elementów semantycznych, takich jak `<section>` czy `<article>`.
+
+---
+
+## CSS Strategy
+
+Style zostały umieszczone bezpośrednio w pliku HTML w sekcji `<style>`. Najważniejsze decyzje stylistyczne:
+
+* Użycie systemowej czcionki dla czytelności.
+* Jasne tło strony z kontrastującymi sekcjami.
+* Wyśrodkowany nagłówek i karta z treścią główną.
+* Delikatne cienie i zaokrąglenia, aby strona wyglądała nowocześnie.
+
+Przykładowe decyzje projektowe:
+
+* Sekcja główna ma maksymalną szerokość, aby tekst nie był zbyt rozciągnięty na dużych ekranach.
+* Kolory zostały dobrane tak, aby nawiązywały do spokojnego, „kosmicznego” klimatu.
+
+W przyszłości style mogą zostać przeniesione do osobnego pliku **style.css**.
+
+---
+
+## Tool Usage
+
+Podczas pracy nad projektem wykorzystano:
+
+* **Edytor kodu** – do pisania i edycji pliku `index.html`.
+* **Przeglądarkę internetową** – do testowania wyglądu strony.
+* **Narzędzia deweloperskie przeglądarki** – do sprawdzania układu i drobnych poprawek stylów.
+* **Asystenta AI** – do pomocy przy strukturze strony, treści opisowej oraz organizacji kodu.
+
+---
+
+## Challenges & Solutions
+
+**1. Czytelna prezentacja treści edukacyjnej**
+Wyzwanie: uniknięcie „ściany tekstu”.
+Rozwiązanie: podział treści na krótkie akapity, listy punktowane i nagłówki.
+
+**2. Prostota i estetyka**
+Wyzwanie: stworzenie estetycznej strony bez zaawansowanych technologii.
+Rozwiązanie: użycie podstawowych właściwości CSS (padding, margin, box-shadow, border-radius).
+
+**3. Dobór kolorów**
+Wyzwanie: zachowanie czytelności przy jednoczesnym klimacie astronomicznym.
+Rozwiązanie: jasne tło i ciemniejszy nagłówek, bez agresywnych kontrastów.
+
+---
+
+## Academic / Technical Sources
+
+* **MDN Web Docs** – dokumentacja HTML i CSS.
+* Materiały edukacyjne dotyczące astronomii (fazy Księżyca).
+* Ogólne poradniki web‑designu dotyczące czytelności i hierarchii treści.
+
+---
+
+## Future Improvements
+
+Planowane ulepszenia projektu:
+
+* Dodanie JavaScript do wyświetlania **aktualnej fazy Księżyca**.
+* Rozszerzenie strony o ilustracje lub animacje cyklu księżycowego.
+* Zastosowanie bardziej semantycznej struktury HTML.
+* Wersja responsywna dla urządzeń mobilnych.
+* Przeniesienie stylów do zewnętrznego pliku CSS.
+
+Po tych zmianach strona może stać się nie tylko projektem pokazowym, ale także prostą aplikacją edukacyjną.
